@@ -10,7 +10,7 @@ headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 # Faze a requisição
 requisicao = requests.get(url, headers=headers)
 
-# Verificar o código de status da requisição
+# Verifica o status da requisição
 if requisicao.status_code == 200:
     print("Sucesso")
 else:
@@ -19,7 +19,7 @@ else:
 # Lê a linha em html
 soup = BeautifulSoup(requisicao.content, 'html.parser')
 
-# Exibi o título da página
+# Exibe o título da página
 title = soup.title.text
 print(title)
 
